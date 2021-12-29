@@ -14,23 +14,29 @@
 
 /*
 * Description
-*	Returns the last element of the list.
+*	Iterates the list ’lst’ and applies the function
+*	’f’ to the content of each element.
+*
 *
 * Parameters
-*	#1. The beginning of the list
+*	#1. The adress of a pointer to an element.
+*	#2. The adress of the function used to iterate on
+*	the list.
 *
 * Return Values
-*	The last element of the list.
+*	None
 */
 
 void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*ptr;
 
+	if (!lst || !f)
+		return ;
 	ptr = lst;
 	while (ptr != NULL)
 	{
-		(*f)(ptr);
+		(*f)(ptr->content);
 		ptr = ptr->next;
 	}
 }
