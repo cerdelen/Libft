@@ -38,7 +38,7 @@ int	ft_atoi(const char *nptr)
 		i++;
 	if (nptr[i] == '+' || nptr[i] == '-')
 		sign = (nptr[i++] - 44) * -1;
-	while (ft_isdigit(nptr[i]))
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 		out = (out * 10) + (nptr[i++] - '0');
 	return (out * sign);
 }
