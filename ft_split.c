@@ -33,11 +33,11 @@ int	wordamount(char const *s, char c)
 	int	i;
 
 	i = 0;
-	amount = 1;
+	amount = 2;
 	while (s[i] != 0)
 	{
-		if (s[i] == c)
-		amount++;
+		if (s[i] == c && s[i +1] != c)
+			amount++;
 	i++;
 	}
 	return (amount);
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 	count = 0;
 	if (!s)
 		return (NULL);
-	ptr = malloc((wordamount(s, c) + 1) * sizeof(char *));
+	ptr = malloc((wordamount(s, c)) * sizeof(char *));
 	if (ptr == NULL)
 		return (NULL);
 	while (s[i] != 0)
