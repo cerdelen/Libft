@@ -67,8 +67,8 @@ OBJS = $(SRCS:.c=.o)
 
 OBJS_B = $(BONUS:.c=.o)
 
-$(NAME): $(OBJS)
-	$(AR) $(NAME) $(OBJS)
+$(NAME): $(OBJS_B) $(OBJS)
+	$(AR) $(NAME) $(OBJS_B) $(OBJS)
 
 $(OBJS): 
 	$(CC) $(CFLAGS) -c $(SRCS)
@@ -77,9 +77,6 @@ $(OBJS_B):
 	$(CC) $(CFLAGS) -c $(BONUS)
 
 all: $(NAME)
-
-bonus: fclean $(OBJS_B) $(OBJS)
-	$(AR) $(NAME) $(OBJS_B) $(OBJS)
 
 clean:
 	$(RM) $(OBJS) $(OBJS_B)
