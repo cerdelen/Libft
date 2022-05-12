@@ -52,6 +52,8 @@ void		ft_putnbr_fd(int n, int fd);
 char		**ft_split(char const *s, char c);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char*));
+void		print_2d_array(char	**arr, int fd);
+void		free_2d_array(char	**arr);
 
 typedef struct s_list
 {

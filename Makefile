@@ -61,6 +61,7 @@ SRCS = 	ft_split.c\
 		ft_lstclear_bonus.c\
 		ft_lstiter_bonus.c\
 		ft_lstmap_bonus.c\
+		two_d_arrays_utils.c\
 
 OBJS = $(SRCS:.c=.o)
 
