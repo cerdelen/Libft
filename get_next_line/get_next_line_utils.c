@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "../libft.h"
 
 void	*gnl_memcpy(void *dest, const void *src, size_t n)
 {
