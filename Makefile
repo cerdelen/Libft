@@ -70,7 +70,7 @@ OBJS = $(SRCS:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	@$(MAKE) 5 -C $(GNL_PATH)
+	@$(MAKE) 50 -C $(GNL_PATH)
 	@$(AR) $(NAME) $(OBJS) get_next_line/get_next_line.a
 	@echo "\033[92mLibft successfully compiled!\033[92m"
 
