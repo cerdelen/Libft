@@ -72,6 +72,6 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "\033[91mGNL successfully cleaned!\033[91m"
+	@echo "\033[91mGNL successfully cleaned!\033[0m"
 
 re: fclean all
