@@ -6,7 +6,7 @@
 #    By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/22 17:13:17 by Cerdelen          #+#    #+#              #
-#    Updated: 2022/07/12 18:12:09 by cerdelen         ###   ########.fr        #
+#    Updated: 2022/07/13 14:15:30 by cerdelen         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -72,6 +72,6 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "\033[91mGNL successfully cleaned!\033[91m"
+	@echo "\033[91mGNL successfully cleaned!\033[0m"
 
 re: fclean all

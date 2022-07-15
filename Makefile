@@ -72,7 +72,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@$(MAKE) 50 -C $(GNL_PATH)
 	@$(AR) $(NAME) $(OBJS) get_next_line/get_next_line.a
-	@echo "\033[92mLibft successfully compiled!\033[92m"
+	@echo "\033[92mLibft successfully compiled!\033[0m"
 
 $(OBJS): 
 	@$(CC) $(CFLAGS) -c $(SRCS)
@@ -84,7 +84,7 @@ clean:
 fclean: clean
 	@$(MAKE) fclean -C $(GNL_PATH)
 	@$(RM) $(NAME)
-	@echo "\033[91mLibft successfully cleaned!\033[91m"
+	@echo "\033[91mLibft successfully cleaned!\033[0m"
 
 re: fclean all
 
