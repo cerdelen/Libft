@@ -67,22 +67,26 @@ SRCS = 	ft_split.c\
 
 OBJS = $(SRCS:.c=.o)
 
+GREEN = \033[92m
+RESET = \033[0m
+RED = \033[91m
+
 %.o: %.c
 	@$(CC) $(FLAGS) -c $< -o $@
-	@echo "\033[92m.\033[0m\c"
+	@echo "$(GREEN).$(RESET)\c"
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@echo "\n\033[92mLibft successfully compiled!\033[0m"
+	@echo "\n$(GREEN)Libft successfully compiled!$(RESET)"
 
 clean:
 	@$(RM) $(OBJS)
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "\033[91mLibft successfully cleaned!\033[0m"
+	@echo "$(RED)Libft successfully cleaned!$(RESET)"
 
 re: fclean all
 
