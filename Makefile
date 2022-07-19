@@ -67,14 +67,15 @@ SRCS = 	ft_split.c\
 
 OBJS = $(SRCS:.c=.o)
 
+%.o: %.c
+	@$(CC) $(FLAGS) -c $< -o $@
+	@echo "\033[92m.\033[0m\c"
+
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	@$(AR) $(NAME) $(OBJS)
-	@echo "\033[92mLibft successfully compiled!\033[0m"
-
-$(OBJS): 
-	@$(CC) $(CFLAGS) -c $(SRCS)
+	@echo "\n\033[92mLibft successfully compiled!\033[0m"
 
 clean:
 	@$(RM) $(OBJS)
