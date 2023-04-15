@@ -25,7 +25,6 @@
 *	The new string.
 *	NULL if the allocation fails.
 */
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int		len1;

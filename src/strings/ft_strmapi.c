@@ -26,7 +26,6 @@
 *	The string created from the successive applications of ’f’.
 *	Returns NULL if the allocation fails.
 */
-
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	size_t	i;

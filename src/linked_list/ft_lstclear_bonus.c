@@ -22,7 +22,6 @@
 *	#1. The address of a pointer to tan element.
 *	#2. The address of the function used to delete the content of the element.
 */
-
 void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
 	t_list	*ptr;

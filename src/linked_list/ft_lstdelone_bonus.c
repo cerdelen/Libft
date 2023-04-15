@@ -22,13 +22,12 @@
 *	#1. The address of a pointer to an element.
 *	#2. The address of the function used to delete the content of the element.
 */
-
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *elem, void (*del)(void*))
 {
-	if (lst)
+	if (elem)
 	{
-		if (lst->content != NULL)
-			del (lst->content);
-		free (lst);
+		if (elem->content != NULL)
+			del (elem->content);
+		free (elem);
 	}
 }

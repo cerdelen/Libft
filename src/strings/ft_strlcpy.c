@@ -30,7 +30,6 @@
 *	If the return value is >= dstsize, the output string has been truncated.
 *	It is the caller's responsibility to handle this.
 */
-
 int	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	unsigned int	i;

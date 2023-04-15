@@ -16,7 +16,6 @@
 * Description
 *	Writes n zeroed bytes to the string s. If n is zero, it does nothing.
 */
-
 void	ft_bzero(void *s, size_t n)
 {
 	unsigned int	i;

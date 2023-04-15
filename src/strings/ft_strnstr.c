@@ -28,7 +28,6 @@
 *	otherwise a pointer to the first character of the first occurrence of needle
 *	is returned.
 */
-
 char	*ft_strnstr(const void *s1, const void *s2, size_t n)
 {
 	unsigned int	i;

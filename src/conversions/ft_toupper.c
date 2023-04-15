@@ -22,7 +22,6 @@
 *	corresponding upper-case letter if there is one; otherwise, the argument is
 *	returned unchanged.
 */
-
 int	ft_toupper(int c)
 {
 	if (c > 96 && c < 123)

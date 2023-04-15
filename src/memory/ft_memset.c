@@ -19,7 +19,6 @@
 * Return Values
 *	Its first argument.
 */
-
 void	*ft_memset(void *s, int c, size_t n)
 {
 	unsigned int	i;

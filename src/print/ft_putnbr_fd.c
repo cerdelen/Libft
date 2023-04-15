@@ -23,7 +23,6 @@
 * Return Values
 *	the number of characters written
 */
-
 static int	digits(int n)
 {
 	int	dig;

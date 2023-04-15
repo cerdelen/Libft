@@ -22,6 +22,7 @@
 *	The string representing the integer.
 *	NULL if the allocation fails.
 */
+char	*ft_itoa(int n);
 
 static int	digits(int n)
 {

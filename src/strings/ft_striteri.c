@@ -22,7 +22,6 @@
 *	#1. The string on which to iterate.
 *	#2. The function to apply to each character.
 */
-
 void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;

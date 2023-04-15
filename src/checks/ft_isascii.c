@@ -20,7 +20,6 @@
 * Return Values
 *	Returns 1 if the character tests true and 0 otherwise.
 */
-
 int	ft_isascii(int c)
 {
 	if (c < 0 || c >= 128)

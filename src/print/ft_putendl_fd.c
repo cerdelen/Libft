@@ -23,7 +23,6 @@
 * Return Values
 *	the number of characters written
 */
-
 void	ft_putendl_fd(char *s, int fd)
 {
 	if (s != NULL)

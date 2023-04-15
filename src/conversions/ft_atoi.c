@@ -24,7 +24,6 @@
 * Return Values
 *	the resulting int from the conversion
 */
-
 int	ft_atoi(const char *nptr)
 {
 	int	i;

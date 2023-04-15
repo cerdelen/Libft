@@ -25,6 +25,7 @@
 *	The trimmed string.
 *	NULL if the allocation fails.
 */
+char	*ft_strtrim(char const *s1, char const *set);
 
 static int	findstart(char const *set, char const *s1)
 {

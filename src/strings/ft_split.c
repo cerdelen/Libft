@@ -26,6 +26,7 @@
 *	The array of new strings resulting from the split.
 *	NULL if the allocation fails.
 */
+char	**ft_split(char const *s, char c);
 
 int	wordamount(char const *s, char c)
 {

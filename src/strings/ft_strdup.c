@@ -22,7 +22,6 @@
 *	A pointer to the duplicate of the string, or
 *	NULL if the Allocation fails.
 */
-
 char	*ft_strdup(const char *s)
 {
 	int		len;

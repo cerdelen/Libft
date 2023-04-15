@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-void	print_2d_array(char	**arr, int fd)
+void	print_string_array(char	**arr, int fd)
 {
 	int	i;
 
@@ -31,7 +31,7 @@ void	print_2d_array(char	**arr, int fd)
 	}
 }
 
-void	free_2d_array(char	**arr)
+void	free_string_array(char	**arr)
 {
 	int	i;
 

@@ -25,7 +25,6 @@
 *	The new element.
 *	NULL if the allocation fails.
 */
-
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*a;
