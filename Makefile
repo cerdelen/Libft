@@ -1,5 +1,6 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -Iincludes
+CFLAGS = -Wall -Wextra -Werror $(ALL_INC)
+
 AR = ar rcs
 
 TARGET = libft.a
@@ -22,6 +23,7 @@ ALL_PATHS = $(PATH_checks) $(PATH_conversions) $(PATH_gnl) $(PATH_linked_list) $
 
 SRC = $(wildcard $(SRC_DIR)/**/*.c)
 OBJ = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC))
+ALL_INC = $(addprefix -I, includes $(wildcard libs/*/includes))
 
 all: dir $(TARGET)
 
