@@ -72,6 +72,17 @@ char	*appending(char *str1, char *str2)
 	return (out);
 }
 
+/*
+* Description
+*	Reads from the input fd in Chunks of BUFFER_SIZE (set as a compiler option) until it finds new line.
+*	If called in a loop until "return == NULL" it will read through file(fd) line by line.
+*
+* Parameters
+*	#1. Integer refering to a filedescriptor.
+*
+* Return Values
+*	Allocated string until new line
+*/
 char	*get_next_line(int fd)
 {
 	char			*buff;

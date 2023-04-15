@@ -22,7 +22,6 @@
 *	If succsesfull, it returns a pointer to allocated memory,
 *	otherwise returns NULL.
 */
-
 void	*ft_calloc(size_t nelem, size_t elsize)
 {
 	void	*ptr;

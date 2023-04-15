@@ -21,7 +21,6 @@
 * Return Values
 *	The number of characters that precede the terminating NUL character. 
 */
-
 int	ft_strlen(const char *s)
 {
 	int	i;

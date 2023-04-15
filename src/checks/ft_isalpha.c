@@ -19,7 +19,6 @@
 * Return Values
 *	Returns 1 if the character tests true and 0 otherwise.
 */
-
 int	ft_isalpha(int c)
 {
 	if (c > 64 && c < 91)

@@ -25,7 +25,6 @@
 *	The new element.
 *	NULL if the allocation fails.
 */
-
 int	ft_lstsize(t_list *lst)
 {
 	t_list	*ptr;

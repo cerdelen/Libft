@@ -22,7 +22,6 @@
 *	the first two differing bytes (treated as unsigned char values, so that \\200
 *	is greater than \\0, for example).  Zero-length strings are always identical.
 */
-
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	unsigned int	i;

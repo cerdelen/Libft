@@ -25,7 +25,6 @@
 *	The substring.
 *	NULL if the allocation fails.
 */
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*ptr;
