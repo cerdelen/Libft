@@ -25,6 +25,7 @@
 *			CHECKS
 */
 
+bool		ft_string_is(char *s, int (*char_is)(int));
 int			ft_isalnum(int c);
 int			ft_isalpha(int c);
 int			ft_isascii(int c);
