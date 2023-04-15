@@ -14,12 +14,12 @@
 
 /*
 * Description
-*	Copies n bytes from string src to string dst.
-*	The two strings may overlap; the copy is always done in a non-destructive
+*	Copies n bytes from memory src to memory dst.
+*	The two memories may overlap; the copy is always done in a non-destructive
 *	manner.
 *
 * Return Values
-*	The original value of dst.
+*	Pointer to dest.
 */
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
