@@ -126,5 +126,15 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 
 
+/**
+*		TERMINAL PRINT COLOURS 
+*/
+
+# define DEFAULT_TERMINAL_COL "\33[0m"
+# define GREEN_TERMINAL_COL "\33[32m"
+# define RED_TERMINAL_COL "\33[1;31m"
+# define YELLOW_TERMINAL_COL "\33[33m"
+# define BLUE_TERMINAL_COL "\33[34m"
+# define PURPLE_TERMINAL_COL "\33[35m"
 
 #endif
