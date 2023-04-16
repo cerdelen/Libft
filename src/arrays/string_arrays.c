@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   two_d_arrays_utils.c                               :+:      :+:    :+:   */
+/*   string_arrays.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 19:47:00 by cerdelen          #+#    #+#             */
-/*   Updated: 2022/05/12 22:11:22 by cerdelen         ###   ########.fr       */
+/*   Updated: 2023/04/16 16:40:52 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include <stdio.h>
 
-void	print_string_array(char	**arr, int fd)
+void	ft_print_string_array(char	**arr, int fd)
 {
 	int	i;
 
@@ -31,7 +31,7 @@ void	print_string_array(char	**arr, int fd)
 	}
 }
 
-void	free_string_array(char	**arr)
+void	ft_free_string_array(char	**arr)
 {
 	int	i;
 
@@ -42,4 +42,18 @@ void	free_string_array(char	**arr)
 			free(arr[i++]);
 		free(arr);
 	}
+}
+
+/*
+*		Returns Size of array INCLUDING! terminating NULL pointer.
+*/
+size_t	ft_string_array_size(char	**arr)
+{
+	size_t	i = 1;
+
+	if (!arr)
+		return (0);
+	while (arr[i] != NULL)
+		i++;
+	return (i);
 }

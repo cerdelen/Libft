@@ -54,11 +54,15 @@ void		*ft_memmove(void *dest, const void *src, size_t n);
 void		*ft_memset(void *s, int c, size_t n);
 
 /**
-*			MISC
+*			ARRAYS
 */
 
-void		print_2d_array(char	**arr, int fd);
-void		free_2d_array(char	**arr);
+void		ft_print_2d_array(char	**arr, int fd);
+void		ft_free_2d_array(char	**arr);
+void		ft_print_int_array(int *arr, size_t n, int fd);
+void		ft_print_int_array_capped_line(int *arr, size_t n, int fd);
+void		ft_print_size_t_array(size_t *arr, size_t n, int fd);
+void		ft_print_size_t_array_capped_line(size_t *arr, size_t n, int fd);
 
 /**
 *			PRINT

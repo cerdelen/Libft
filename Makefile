@@ -8,7 +8,7 @@ TARGET = libft.a
 SRC_DIR = src
 OBJ_DIR = obj
 
-ALL_PATHS = checks conversions gnl linked_list memory misc print strings
+ALL_PATHS = checks conversions gnl linked_list memory print strings arrays
 
 SRC = $(wildcard $(SRC_DIR)/**/*.c)
 OBJ = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC))
