@@ -63,6 +63,7 @@ void		ft_print_int_array(int *arr, size_t n, int fd);
 void		ft_print_int_array_capped_line(int *arr, size_t n, int fd);
 void		ft_print_size_t_array(size_t *arr, size_t n, int fd);
 void		ft_print_size_t_array_capped_line(size_t *arr, size_t n, int fd);
+size_t		ft_string_array_size(char	**arr);
 
 /**
 *			PRINT
