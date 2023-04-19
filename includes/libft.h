@@ -57,13 +57,17 @@ void		*ft_memset(void *s, int c, size_t n);
 *			ARRAYS
 */
 
-void		ft_print_2d_array(char	**arr, int fd);
-void		ft_free_2d_array(char	**arr);
+//strings
+void		ft_print_string_array(char	**arr, int fd);
+void		ft_free_string_array(char	**arr);
+size_t		ft_string_array_size(char	**arr);
+size_t		ft_string_array_size(char	**arr);
+//int
 void		ft_print_int_array(int *arr, size_t n, int fd);
 void		ft_print_int_array_capped_line(int *arr, size_t n, int fd);
+//size_t
 void		ft_print_size_t_array(size_t *arr, size_t n, int fd);
 void		ft_print_size_t_array_capped_line(size_t *arr, size_t n, int fd);
-size_t		ft_string_array_size(char	**arr);
 
 /**
 *			PRINT
