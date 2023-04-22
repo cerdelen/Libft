@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/21 13:58:25 by cerdelen          #+#    #+#             */
-/*   Updated: 2023/04/22 09:51:14 by cerdelen         ###   ########.fr       */
+/*   Updated: 2023/04/22 10:38:12 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,15 +28,13 @@ void	ft_lstpop(t_list **lst, void (*del)(void *))
 		return ;
 	if (!(*lst)->next)
 	{
-		del((*lst)->content);
-		free(*lst);
+		ft_lstdelone(*lst, del);
 		*lst = NULL;
 		return ;
 	}
 	second_to_last = *lst;
 	while(second_to_last->next->next)
 		second_to_last = second_to_last->next;
-	del(second_to_last->next->content);
-	free(second_to_last->next);
+	ft_lstdelone(second_to_last->next, del);
 	second_to_last->next = NULL;
 }
