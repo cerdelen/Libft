@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstpop.c                                        :+:      :+:    :+:   */
+/*   ft_lstpopfirst.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/04/21 13:58:25 by cerdelen          #+#    #+#             */
-/*   Updated: 2023/04/22 10:38:12 by cerdelen         ###   ########.fr       */
+/*   Created: 2023/04/23 14:02:25 by cerdelen          #+#    #+#             */
+/*   Updated: 2023/04/23 14:08:28 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,21 @@
 
 /*
 * Description
-*	Removes last element of list
+*	Removes first element of list
 *
 * Parameters
 *	#1. Address of ptr to list
 *
 */
-void	ft_lstpop(t_list **lst, void (*del)(void *))
+void	ft_lstpopfirst(t_list **lst, void (*del)(void *))
 {
-	t_list	*second_to_last;
+	t_list	*first = *lst;
 
 	if (!(*lst))
 		return ;
 	if (!(*lst)->next)
-	{
-		ft_lstdelone(*lst, del);
 		*lst = NULL;
-		return ;
-	}
-	second_to_last = *lst;
-	while(second_to_last->next->next)
-		second_to_last = second_to_last->next;
-	ft_lstdelone(second_to_last->next, del);
-	second_to_last->next = NULL;
+	else
+		*lst = first->next;
+	ft_lstdelone(first, del);
 }
