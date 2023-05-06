@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/06 11:00:44 by cerdelen          #+#    #+#             */
-/*   Updated: 2023/05/06 11:19:02 by cerdelen         ###   ########.fr       */
+/*   Updated: 2023/05/06 12:30:07 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,21 +21,24 @@
 *	#2. Function to be applied to content
 *
 * Return Values
-*	None
+*	True if at least 1 elem got deleted, False if nothing got deleted
 */
-void	ft_lstfilter(t_list **lst, void *control, bool (*f)(void*, void*), void (*del)(void*))
+bool	ft_lstfilter(t_list **lst, void *control, bool (*f)(void*, void*), void (*del)(void*))
 {
 	t_list	*ptr;
 	t_list	*prev;
+	bool	ret;
 
 	if (!(*lst))
-		return ;
+		return (false);
 	ptr = *lst;
 	prev = NULL;
+	ret = false;
 	while (ptr)
 	{
 		if (f(control, ptr->content))
 		{
+			ret = true;
 			if(prev == NULL)
 			{
 				*lst = ptr->next;
@@ -51,4 +54,5 @@ void	ft_lstfilter(t_list **lst, void *control, bool (*f)(void*, void*), void (*d
 		prev = ptr;
 		ptr = ptr->next;
 	}
+	return (ret);
 }
