@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstfilter.c                                     :+:      :+:    :+:   */
+/*   ft_lstinsert.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/05/06 11:00:44 by cerdelen          #+#    #+#             */
-/*   Updated: 2023/05/07 08:54:54 by cerdelen         ###   ########.fr       */
+/*   Created: 2023/05/07 08:52:41 by cerdelen          #+#    #+#             */
+/*   Updated: 2023/05/07 09:08:37 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,47 +14,47 @@
 
 /*
 * Description
-*	Deletes all occurences in which compare function returns true
+*	Inserts element first time function returns true or at end of the list
 *
 * Parameters
 *	#1. The adress of a pointer to a list.
-*	#2. Control content which is compared to elements in list.
-*	#3. Function to be applied to content.
-*	#4. Function to delete content.
+*	#2. Element to be inserted.
+*	#3. Function to be applied to content to determine where to insert.
 *
 * Return Values
-*	True if at least 1 elem got deleted, False if nothing got deleted
+*	Nothing
 */
-bool	ft_lstfilter(t_list **lst, void *control, bool (*f)(void*, void*), void (*del)(void*))
+void	ft_lstinsert(t_list **lst, t_list *elem, bool (*f)(void*, void*))
 {
 	t_list	*ptr;
 	t_list	*prev;
-	bool	ret;
 
+	if (!elem)
+		return ;
 	if (!(*lst))
-		return (false);
+	{
+		ft_lstadd_front(lst, elem);
+		return ;
+	}
 	ptr = *lst;
 	prev = NULL;
-	ret = false;
 	while (ptr)
 	{
-		if (f(control, ptr->content))
+		if (f(elem->content, ptr->content))
 		{
-			ret = true;
 			if(prev == NULL)
 			{
-				*lst = ptr->next;
-				ft_lstdelone(ptr, del);
-				ptr = *lst;
-				continue ;
+				elem->next = *lst;
+				*lst = elem;
+				return ;
 			}
-			prev->next = ptr->next;
-			ft_lstdelone(ptr, del);
-			ptr = prev->next;
-			continue ;
+			elem->next = ptr;
+			prev->next = elem;
+			return ;
 		}
 		prev = ptr;
 		ptr = ptr->next;
 	}
-	return (ret);
+	prev->next = elem;
+	elem->next = NULL;
 }

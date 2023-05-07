@@ -133,6 +133,7 @@ void		ft_lstpopfirst(t_list **lst, void (*del)(void *));
 t_list		*ft_lstcpy(t_list *lst);
 bool		ft_lsthas(t_list *lst, void *cont);
 bool		ft_lstfilter(t_list **lst, void *control, bool (*f)(void*, void*), void (*del)(void*));
+void		ft_lstinsert(t_list **lst, t_list *elem, bool (*f)(void*, void*));
 
 
 /**
