@@ -6,7 +6,7 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/05 12:56:25 by cerdelen          #+#    #+#             */
-/*   Updated: 2023/05/05 13:02:21 by cerdelen         ###   ########.fr       */
+/*   Updated: 2023/05/07 18:56:35 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,18 +24,18 @@
 *	True if it already includes this object
 *	False if it does not already includes this object
 */
-bool	ft_lsthas(t_list *lst, void *cont)
+t_list	*ft_lsthas(t_list *lst, void *cont)
 {
 	t_list	*ptr;
 
 	if (!lst)
-		return (false);
+		return (NULL);
 	ptr = lst;
 	while (ptr)
 	{
 		if (ptr->content == cont)
-			return (true);
+			return (ptr);
 		ptr = ptr->next;
 	}
-	return (false);
+	return (NULL);
 }
