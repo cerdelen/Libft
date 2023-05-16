@@ -6,18 +6,12 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:22:20 by cerdelen          #+#    #+#             */
-/*   Updated: 2023/05/16 19:43:11 by cerdelen         ###   ########.fr       */
+/*   Updated: 2023/05/16 19:45:55 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-
-
-void prints(void *in)
-{
-	printf("%i\n", *(int*)in);
-}
 
 void	split_list_to_halves(t_list **lst, t_list **left, t_list **right)
 {
@@ -94,10 +88,3 @@ void	ft_lst_mergesort(t_list **lst, bool (*comp)(void*, void*))
 	ft_lst_mergesort(&right, comp);
 	merge(left, right, lst, comp);
 }
-
-// how it works i create 2 sub lists (i just make in middle the cut)
-
-// i give into mergesort a list
-// i call recursively merge sort on 2 halfs of it respectively
-// call merge and give the original lst as dest
-// merge goes through both half lists and puts dest as ordered out
