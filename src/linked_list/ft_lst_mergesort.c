@@ -6,12 +6,11 @@
 /*   By: cerdelen <cerdelen@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/16 17:22:20 by cerdelen          #+#    #+#             */
-/*   Updated: 2023/05/16 19:45:55 by cerdelen         ###   ########.fr       */
+/*   Updated: 2023/05/16 19:47:18 by cerdelen         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
 
 void	split_list_to_halves(t_list **lst, t_list **left, t_list **right)
 {
@@ -28,7 +27,6 @@ void	split_list_to_halves(t_list **lst, t_list **left, t_list **right)
 	*right = tmp->next;
 	tmp->next = NULL;
 }
-
 
 void	merge(t_list *left, t_list *right, t_list **dst, bool (*comp)(void*, void*))
 {
