@@ -6,7 +6,6 @@ Welcome to Libft! This repository is a collection of C functions that can help y
 
 - [About](#about)
 - [Installation](#installation)
-- [Usage](#usage)
 
 ## About
 
