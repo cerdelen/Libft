@@ -139,6 +139,15 @@ void		ft_lst_mergesort(t_list **lst, bool (*comp)(void*, void*));
 
 
 /**
+ *      Utils
+ */
+
+
+char    *get_next_arg(int *argc, char ***argv);
+
+
+
+/**
 *		TERMINAL PRINT COLOURS 
 */
 
