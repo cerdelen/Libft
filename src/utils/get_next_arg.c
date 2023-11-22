@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 char    *get_next_arg(int *argc, char ***argv)
 {
